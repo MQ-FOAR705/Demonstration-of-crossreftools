@@ -4,6 +4,10 @@
 % All of the setup stuff that used to go here I've shoved into foar705journal.sty since that's much better practice than copy-pasta
 \usepackage{foar705journal}
 
+%https://en.wikibooks.org/wiki/LaTeX/Modular_Documents#Separate_compilation_of_child_documents
+\usepackage{subfiles}
+
+
 \title{Demonstration of crossreftools}
 \author{Brian Ballsun-Stanton}
 \date{August 2019}
@@ -15,7 +19,8 @@
 % Much cleaner. 
 \tablesofcontentsanderrors
 
-\section{Introduction}
+\section{Stuff in the primary document, demonstrating foar705journal class}
+
 
 
 \lipsum[1]
@@ -30,7 +35,13 @@
 \item \lipsum[1]
 }
 
-\solution{\lipsum[1]}{\lipsum[1]}{\lipsum[1]}
+\solution{%Intention
+\lipsum[1]
+}{%Action
+\lipsum[1]
+}{%Result
+\lipsum[1]
+}
 
 \subsection{Error 1}
 \label{Error: This was a silly error}
@@ -44,6 +55,9 @@
 \label{Error: This was a different silly error that is displayed}
 \lipsum[1-3]
 
+\section{Importing subfiles}
 
+\subfile{Journals/subfile1.tex}
+\subfile{Journals/subfile2.tex}
 
 \end{document}

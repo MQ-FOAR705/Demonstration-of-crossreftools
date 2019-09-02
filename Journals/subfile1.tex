@@ -1,0 +1,19 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\subsection{This is subfile 1}
+\lipsum[1-3]
+
+\itemizederror{Test error in external document via macro}{% 
+\item \lipsum[1]
+\item \lipsum[1]
+}
+
+\solution{%Intention
+\lipsum[1]
+}{%Action
+\lipsum[1]
+}{%Result
+\lipsum[1]
+}
+
+\end{document}
